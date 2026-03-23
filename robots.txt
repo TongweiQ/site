@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://chashoujihao.online/sitemap.xml
