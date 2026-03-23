@@ -1,252 +1,514 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>企业线索清洗_高管联系方式核验_商务信息验证服务</title>
-  <meta name="description" content="提供企业公开信息核验、商务线索清洗、公开联系方式校验、客户背景初筛等服务，适用于合法合规的商务拓客与合作前审查场景。" />
-  <meta name="keywords" content="企业信息核验,商务线索清洗,公开联系方式校验,客户背景初筛,企业公开信息查询" />
-  <meta name="robots" content="index,follow" />
-  <meta name="author" content="企业信息核验服务">
-  <meta name="baidu-site-verification" content="codeva-6JUcJCNejC" />
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      background: #0b0d12;
-      color: #f5f7fb;
-      line-height: 1.7;
-    }
-    a { color: inherit; }
-    .container {
-      width: min(1120px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-    .hero {
-      padding: 72px 0 48px;
-      background:
-        radial-gradient(circle at top right, rgba(255, 49, 49, 0.18), transparent 30%),
-        radial-gradient(circle at left center, rgba(255, 255, 255, 0.08), transparent 30%),
-        linear-gradient(180deg, #121722 0%, #0b0d12 100%);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 999px;
-      font-size: 13px;
-      color: #c9d2e3;
-      background: rgba(255,255,255,0.04);
-      margin-bottom: 18px;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(34px, 6vw, 60px);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-    }
-    .highlight {
-      color: #ff3b30;
-      font-weight: 800;
-    }
-    .sub {
-      max-width: 860px;
-      margin-top: 18px;
-      color: #c0cad9;
-      font-size: 18px;
-    }
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 168px;
-      padding: 14px 22px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-    }
-    .btn-primary {
-      background: #ffffff;
-      color: #111827;
-    }
-    .btn-secondary {
-      background: transparent;
-      color: #f5f7fb;
-      border-color: rgba(255,255,255,0.16);
-    }
-    .btn:hover { transform: translateY(-1px); }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 42px;
-    }
-    .card {
-      background: #121722;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.22);
-    }
-    .card h3 {
-      margin: 0 0 12px;
-      font-size: 20px;
-    }
-    .card p,
-    .section p,
-    .section li {
-      color: #c0cad9;
-    }
-    .section {
-      padding: 58px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .section h2 {
-      margin: 0 0 16px;
-      font-size: 32px;
-    }
-    .two-col {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 24px;
-    }
-    .list {
-      margin: 0;
-      padding-left: 20px;
-    }
-    .list li { margin-bottom: 10px; }
-    .qq-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-      min-height: 100%;
-      background: linear-gradient(180deg, #171d2a 0%, #11151f 100%);
-    }
-    .qq-label {
-      color: #9cabbe;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .qq-id {
-      font-size: clamp(26px, 5vw, 44px);
-      font-weight: 800;
-      color: #ffffff;
-      letter-spacing: 0.03em;
-    }
-    .note {
-      font-size: 14px;
-      color: #8f9bae;
-    }
-    .footer {
-      padding: 34px 0 54px;
-      color: #8f9bae;
-      font-size: 14px;
-    }
-    @media (max-width: 900px) {
-      .grid,
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-      .hero {
-        padding-top: 56px;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>从海量线索中，提炼商机金矿_企业信息核验_线索清洗服务</title>
+  <meta name="description" content="提供企业公开信息核验、商务线索清洗、公开联系方式校验、客户背景初筛等服务，适用于合法合规的商务拓客与合作前审查场景。" />
+  <meta name="keywords" content="企业信息核验,商务线索清洗,公开联系方式校验,客户背景初筛,企业公开信息查询" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="企业信息核验服务">
+  <style>
+    /* 核心基础样式 */
+    * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: #010206;
+      color: #f5f7fb;
+      line-height: 1.8;
+      overflow-x: hidden;
+      perspective: 1000px;
+    }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* 霓虹与颜色变量 */
+    :root {
+      --neon-blue: #00f3ff;
+      --neon-pink: #ff00c1;
+      --neon-purple: #9400ff;
+      --bg-card: rgba(18, 23, 34, 0.7);
+      --text-primary: #f5f7fb;
+      --text-secondary: #c9d2e3;
+    }
+
+    /* 全局全局动态粒子背景 */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: radial-gradient(circle at center, #0a0e1a 0%, #010206 100%);
+    }
+
+    /* 容器 */
+    .container {
+      width: min(1200px, calc(100% - 48px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* --- Hero 英雄区 --- */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .hero-content { max-width: 900px; }
+    .badge {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid rgba(0, 243, 255, 0.2);
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--neon-blue);
+      background: rgba(0, 243, 255, 0.05);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+      background: linear-gradient(135deg, #ffffff 30%, var(--neon-blue) 70%, var(--neon-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+    }
+    .highlight { position: relative; display: inline-block; color: #ffffff; -webkit-text-fill-color: #ffffff; }
+    .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: -5px; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+      box-shadow: 0 0 10px var(--neon-blue);
+    }
+    .sub {
+      max-width: 800px;
+      margin: 28px auto 42px;
+      color: var(--text-secondary);
+      font-size: 20px;
+      font-weight: 300;
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* --- 按钮样式 (流光边缘) --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 190px;
+      padding: 16px 28px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      z-index: -1;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--neon-blue));
+      background-size: 400%;
+      border-radius: 16px;
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .btn:hover::before {
+      opacity: 1;
+      animation: steam 10s linear infinite;
+    }
+    .btn-primary {
+      background: #ffffff;
+      color: #010206;
+      box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: #f5f7fb;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .btn-secondary:hover {
+      border-color: var(--neon-blue);
+      color: var(--neon-blue);
+      text-shadow: 0 0 10px var(--neon-blue);
+    }
+    .btn:hover { transform: translateY(-3px) scale(1.02); }
+
+    @keyframes steam {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 200% 0%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    /* 法律风险警示备注 */
+    .hero .note {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      color: #667085;
+    }
+
+    /* --- 主体区域 --- */
+    .section {
+      padding: 120px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    .section-header { text-align: center; max-width: 700px; margin: 0 auto 72px; }
+    .section-header h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin-bottom: 16px;
+      color: #ffffff;
+      text-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    .section-header p { color: var(--text-secondary); font-size: 18px; }
+
+    /* --- 3D 卡片与网格 --- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .card-wrap {
+      perspective: 1000px; /* 创建 3D 空间 */
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out; /* 关键：快速响应 */
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      transform-style: preserve-3d; /* 内部元素保持 3D */
+      backface-visibility: hidden;
+    }
+    .card:hover {
+      border-color: rgba(0, 243, 255, 0.2);
+      box-shadow: 0 0 30px rgba(0, 243, 255, 0.1), 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+    .card-glow {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at center, rgba(0, 243, 255, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .card:hover .card-glow { opacity: 1; }
+
+    .card-icon {
+      width: 56px; height: 56px;
+      border-radius: 12px;
+      background: rgba(0, 243, 255, 0.05);
+      color: var(--neon-blue);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 24px;
+      font-size: 24px;
+      text-shadow: 0 0 10px var(--neon-blue);
+      transform: translateZ(30px); /* 突出卡片表面 */
+    }
+    .card h3 {
+      margin: 0 0 14px; font-size: 22px; color: #ffffff;
+      transform: translateZ(25px);
+    }
+    .card p {
+      color: var(--text-secondary);
+      font-size: 16px; line-height: 1.7;
+      transform: translateZ(20px);
+    }
+
+    /* --- 服务内容列表 --- */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+    }
+    .list-card ul { margin: 24px 0 0; }
+    .list-card li {
+      padding: 12px 0 12px 28px;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      position: relative;
+      transition: color 0.3s;
+    }
+    .list-card li:hover { color: var(--neon-blue); }
+    .list-card li::before {
+      content: '✦';
+      position: absolute;
+      left: 0; top: 12px;
+      color: var(--neon-blue);
+      opacity: 0.6;
+      text-shadow: 0 0 5px var(--neon-blue);
+    }
+    .note-box {
+      grid-column: 1 / -1;
+      background: rgba(0, 243, 255, 0.03);
+      border: 1px solid rgba(0, 243, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      color: #8f9bae;
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    /* --- 联系区 (强烈霓虹效果) --- */
+    .qq-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      border-color: rgba(148, 0, 255, 0.1);
+      background: linear-gradient(135deg, rgba(148, 0, 255, 0.05) 0%, rgba(18, 23, 34, 0.7) 100%);
+    }
+    .qq-box:hover {
+      border-color: rgba(148, 0, 255, 0.3);
+      box-shadow: 0 0 30px rgba(148, 0, 255, 0.15), 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+    .qq-icon {
+      font-size: 40px;
+      color: var(--neon-purple);
+      margin-bottom: 24px;
+      text-shadow: 0 0 15px var(--neon-purple);
+    }
+    .qq-id {
+      font-size: clamp(30px, 6vw, 56px);
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 0.03em;
+      background: linear-gradient(135deg, #ffffff 40%, var(--neon-purple) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 40px rgba(148, 0, 255, 0.4);
+    }
+    .qq-note { font-size: 16px; color: #8f9bae; margin-top: 18px; }
+
+    /* --- 页脚 --- */
+    .footer {
+      padding: 48px 0;
+      color: #667085;
+      font-size: 14px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    /* --- 响应式适配 --- */
+    @media (max-width: 992px) {
+      .grid, .two-col { grid-template-columns: 1fr; gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      .hero { height: auto; padding: 120px 0 60px; }
+      .section { padding: 80px 0; }
+      .cta-row { flex-direction: column; gap: 14px; }
+      .btn { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <div class="badge">企业商务信息核验服务</div>
-      <h1>企业线索清洗与高管联系方式核验服务</h1>
-      <p class="sub">企业线索清洗、公开信息核验、高价值商务触达前置验证</p>
-      <p class="sub">面向合法合规的商务场景，提供企业线索清洗、高管联系方式核验、公开信息验证、客户背景初筛、线索真实性验证等服务，帮助提升拓客效率，降低无效沟通成本。</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">立即咨询</a>
-        <a class="btn btn-secondary" href="#service">查看服务内容</a>
-      </div>
-      <div class="grid">
-        <div class="card">
-          <h3>公开信息核验</h3>
-          <p>针对企业公开披露信息、公开联系人资料、工商线索与业务线索做交叉校验，减少无效线索与错误触达。</p>
-        </div>
-        <div class="card">
-          <h3>线索真实性初筛</h3>
-          <p>适用于商务合作前、客户接触前、渠道对接前的基础验证场景，帮助快速判断线索可信度与跟进优先级。</p>
-        </div>
-        <div class="card">
-          <h3>人工沟通交付</h3>
-          <p>支持按需求沟通、按场景匹配方案、按业务目标输出结果，适合高频获客与精准触达团队使用。</p>
-        </div>
-      </div>
-    </div>
-    <p style="color:#8f9bae;margin-top:10px;font-size:14px;">仅基于公开信息核验，不涉及任何隐私数据获取</p>
-  </header>
+    <canvas id="particles-js"></canvas>
 
-  <main>
-    <section class="section" id="service">
-      <div class="container two-col">
-        <div class="card">
-          <h2>服务内容</h2>
-          <ul class="list">
-            <li>企业公开信息核验</li>
-            <li>公开联系方式有效性校验</li>
-            <li>商务线索清洗与初步筛选</li>
-            <li>合作前基础背景初筛</li>
-            <li>客户真实性辅助判断</li>
-            <li>定向业务场景咨询服务</li>
-          </ul>
-          <p>
-            页面展示内容定位于合规的公开信息验证与商务线索服务，不涉及任何非法获取、出售或滥用个人隐私信息的用途。
-          </p>
-        </div>
-        <div class="card">
-          <h2>适用场景</h2>
-          <ul class="list">
-            <li>商务合作前的公开信息确认</li>
-            <li>电销、渠道、招商、B2B触达前的线索清洗</li>
-            <li>客户背景基础核验与业务真实性判断</li>
-            <li>高价值客户线索排序与跟进优先级划分</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <header class="hero">
+    <div class="container hero-content">
+      <div class="badge">Enterprise Corporate Verify</div>
+      <h1>从海量线索中，提炼<span class="highlight">商机金矿</span></h1>
+      <p class="sub">企业线索清洗、公开信息核验、高价值商务触达前置验证，让每一次沟通都更有价值。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">立即咨询</a>
+        <a class="btn btn-secondary" href="#service">查看服务</a>
+      </div>
+    </div>
+    <p class="note">仅基于公开信息核验，不涉及任何非法数据获取</p>
+  </header>
 
-    <section class="section">
-      <div class="container two-col">
-        <div class="card">
-          <h2>优势说明</h2>
-          <ul class="list">
-            <li>响应速度快，适合高频业务验证需求</li>
-            <li>结果清晰直观，便于快速决策与跟进</li>
-            <li>支持定向场景沟通，按需提供核验方案</li>
-            <li>适合电商、销售、渠道、招商等多种业务场景</li>
-          </ul>
-        </div>
-        <div class="card qq-box" id="contact">
-          <div class="qq-label">联系咨询</div>
-          <div class="qq-id">QQ：QTW6768</div>
-          <div class="note">如需沟通服务内容、合作方式、场景匹配，可直接通过 QQ 联系。</div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <main>
+        <section class="section" id="advantage">
+      <div class="container">
+        <div class="section-header">
+          <h2>核心服务优势</h2>
+          <p>赋能商务拓客团队，快速甄别高质量线索，降低沟通成本与无效投入。</p>
+        </div>
+        <div class="grid">
+          <div class="card-wrap">
+            <div class="card" data-tilt>
+              <div class="card-glow"></div>
+              <div class="card-icon">✦</div>
+              <h3>公开信息核验</h3>
+              <p>针对企业公开披露信息、工商与业务线索做交叉校验，减少错误触达。</p>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card" data-tilt>
+              <div class="card-glow"></div>
+              <div class="card-icon">✧</div>
+              <h3>线索真实性初筛</h3>
+              <p>适用于接触客户、渠道对接前的基础验证，帮助判断线索可信度与跟进优先级。</p>
+            </div>
+          </div>
+          <div class="card-wrap">
+            <div class="card" data-tilt>
+              <div class="card-glow"></div>
+              <div class="card-icon">✦</div>
+              <h3>人工个性化交付</h3>
+              <p>支持按需定制核验方案，匹配不同业务场景下的精准获客与触达需求。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
-      © 2026 chashoujihao.online ｜ 企业商务信息核验与线索清洗服务
-    </div>
-  </footer>
+        <section class="section" id="service">
+      <div class="container two-col">
+        <div class="card list-card" data-tilt data-tilt-max="5">
+            <div class="card-glow"></div>
+          <h2>服务内容</h2>
+          <ul>
+            <li>企业工商与公开信息合法校验</li>
+            <li>公开联系方式有效性核验（如：座机、商务邮箱）</li>
+            <li>商务线索清洗与初步真伪筛选</li>
+            <li>合作前基础背景公开初筛</li>
+            <li>高价值客户线索排序与跟进建议</li>
+          </ul>
+        </div>
+        <div class="card qq-box" id="contact" data-tilt data-tilt-max="10">
+          <div class="card-glow"></div>
+          <div class="qq-icon">✧</div>
+          <p>联系咨询 (Contact Us)</p>
+          <div class="qq-id">QQ：QTW6768</div>
+          <div class="qq-note">随时沟通业务需求与个性化方案。</div>
+        </div>
+        <div class="note-box">
+          温馨提示：本服务定位于合规的公开信息验证，不涉及任何出售、交换个人隐私信息的用途，请在合法合规前提下使用验证结果。
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="container">
+      © 2026 chashoujihao.online | 企业商务信息核验与线索清洗服务
+    </div>
+  </footer>
+
+  <script>
+    // --- 1. 原生 JS 动态粒子背景 ---
+    const canvas = document.getElementById('particles-js');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particlesArray;
+    let mouse = { x: null, y: null, radius: (canvas.height / 80) * (canvas.width / 80) };
+
+    window.addEventListener('mousemove', (event) => { mouse.x = event.x; mouse.y = event.y; });
+    window.addEventListener('resize', () => { canvas.width = innerWidth; canvas.height = innerHeight; mouse.radius = (canvas.height / 80) * (canvas.width / 80); init(); });
+    window.addEventListener('mouseout', () => { mouse.x = undefined; mouse.y = undefined; });
+
+    class Particle {
+      constructor(x, y, directionX, directionY, size, color) {
+        this.x = x; this.y = y; this.directionX = directionX; this.directionY = directionY; this.size = size; this.color = color;
+      }
+      draw() {
+        ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false); ctx.fillStyle = this.color; ctx.fill();
+      }
+      update() {
+        if (this.x > canvas.width || this.x < 0) { this.directionX = -this.directionX; }
+        if (this.y > canvas.height || this.y < 0) { this.directionY = -this.directionY; }
+        let dx = mouse.x - this.x; let dy = mouse.y - this.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < mouse.radius) {
+          if (mouse.x < this.x && this.x < canvas.width - this.size * 10) { this.x += 10; }
+          if (mouse.x > this.x && this.x > this.size * 10) { this.x -= 10; }
+          if (mouse.y < this.y && this.y < canvas.height - this.size * 10) { this.y += 10; }
+          if (mouse.y > this.y && this.y > this.size * 10) { this.y -= 10; }
+        }
+        this.x += this.directionX * 0.5; this.y += this.directionY * 0.5; this.draw();
+      }
+    }
+
+    function init() {
+      particlesArray = []; let numberOfParticles = (canvas.height * canvas.width) / 9000;
+      for (let i = 0; i < numberOfParticles * 0.6; i++) {
+        let size = (Math.random() * 1.5) + 0.5;
+        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+        let directionX = (Math.random() * 2) - 1;
+        let directionY = (Math.random() * 2) - 1;
+        let color = 'rgba(0, 243, 255, 0.4)'; particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate); ctx.clearRect(0, 0, innerWidth, innerHeight);
+      for (let i = 0; i < particlesArray.length; i++) { particlesArray[i].update(); }
+      connect();
+    }
+
+    function connect() {
+      let opacityValue = 1;
+      for (let a = 0; a < particlesArray.length; a++) {
+        for (let b = a; b < particlesArray.length; b++) {
+          let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+          if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+            opacityValue = 1 - (distance / 20000);
+            ctx.strokeStyle = `rgba(148, 0, 255, ${opacityValue * 0.3})`;
+            ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(particlesArray[a].x, particlesArray[a].y); ctx.lineTo(particlesArray[b].x, particlesArray[b].y); ctx.stroke();
+          }
+        }
+      }
+    }
+    init(); animate();
+
+    // --- 2. 原生 JS 鼠标跟随 3D 卡片 ---
+    const cards = document.querySelectorAll('[data-tilt]');
+    cards.forEach(card => {
+      const maxTilt = card.getAttribute('data-tilt-max') || 15;
+      const cardWrap = card.parentElement;
+
+      cardWrap.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+  0const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -maxTilt;
+        const rotateY = ((x - centerX) / centerX) * maxTilt;
+
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      cardWrap.addEventListener('mouseleave', () => {
+        card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+      });
+    });
+  </script>
 </body>
 </html>
