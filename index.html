@@ -3,280 +3,1101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="baidu-site-verification" content="codeva-6JUcJCNejC" />
+  <meta name="baidu-site-verification" content="codeva-6JUcJCNejC">
   <meta name="shenma-site-verification" content="d163c4a518036554b25469a6f559442f_1774335925">
-  <title>企业线索清洗｜高管联系方式核验｜企业信息核验服务</title>
-  <meta name="description" content="提供合规的企业公开信息核验、商务线索清洗服务">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #010206;
-      color: #f5f7fb;
-      line-height: 1.8;
-      overflow-x: hidden;
-      perspective: 1000px;
+  <meta name="description" content="提供企业公开信息核验、商务线索清洗、公开联系方式有效性初筛服务，帮助销售、招商与BD团队减少无效触达。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#060816">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="企业公开信息核验与商务线索清洗">
+  <meta property="og:description" content="聚焦企业公开信息核验、商务线索清洗与触达前置验证，减少无效沟通成本。">
+  <meta property="og:url" content="https://chashoujihao.online/">
+  <meta property="og:site_name" content="chashoujihao.online">
+  <link rel="canonical" href="https://chashoujihao.online/">
+  <title>企业公开信息核验与商务线索清洗 | chashoujihao.online</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "chashoujihao.online",
+      "url": "https://chashoujihao.online/",
+      "description": "企业公开信息核验、商务线索清洗与触达前置验证服务"
     }
-    a { text-decoration: none; color: inherit; }
-    ul { list-style: none; }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     :root {
-      --neon-blue: #00f3ff;
-      --neon-pink: #ff00c1;
-      --neon-purple: #9400ff;
-      --bg-card: rgba(18, 23, 34, 0.7);
-      --text-secondary: #c9d2e3;
+      --bg: #050712;
+      --bg-soft: rgba(15, 20, 38, 0.78);
+      --bg-strong: rgba(12, 17, 31, 0.94);
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #f5f7fb;
+      --text-secondary: #b8c2d9;
+      --accent: #00e9ff;
+      --accent-2: #6f6bff;
+      --accent-3: #ff4dc4;
+      --accent-warm: #87ffd2;
+      --shadow: 0 18px 70px rgba(0, 0, 0, 0.35);
+      --radius-lg: 28px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --container: min(1180px, calc(100% - 40px));
     }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(0, 233, 255, 0.10), transparent 28%),
+        radial-gradient(circle at top right, rgba(111, 107, 255, 0.14), transparent 26%),
+        linear-gradient(180deg, #09111f 0%, #050712 55%, #04050a 100%);
+      color: var(--text);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { max-width: 100%; display: block; }
 
     #particles-js {
-      position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: -1;
-      background: radial-gradient(circle at center, #0a0e1a 0%, #010206 100%);
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: transparent;
     }
 
-    .container { width: min(1200px, calc(100% - 48px)); margin: 0 auto; position: relative; z-index: 1; }
+    .container {
+      width: var(--container);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(5, 7, 18, 0.55);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .topbar-inner {
+      width: var(--container);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 11px;
+      background:
+        linear-gradient(135deg, rgba(0, 233, 255, 0.95), rgba(111, 107, 255, 0.95));
+      box-shadow: 0 0 30px rgba(0, 233, 255, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 2px;
+      border-radius: 9px;
+      background: rgba(6, 8, 22, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .brand-label {
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .nav a {
+      transition: color 0.25s ease;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+    }
 
     .hero {
-      height: 100vh; display: flex; align-items: center; justify-content: center;
-      text-align: center; position: relative; overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 82px 0 48px;
+      min-height: calc(100vh - 64px);
+      display: flex;
+      align-items: center;
     }
-    .hero-content { max-width: 900px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: center;
+    }
+
     .badge {
-      display: inline-block; padding: 8px 18px; border: 1px solid rgba(0, 243, 255, 0.2);
-      border-radius: 999px; font-size: 14px; color: var(--neon-blue);
-      background: rgba(0, 243, 255, 0.05); margin-bottom: 24px; text-transform: uppercase;
-      letter-spacing: 0.1em; box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(0, 233, 255, 0.18);
+      border-radius: 999px;
+      background: rgba(0, 233, 255, 0.06);
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
-    h1 {
-      margin: 0; font-size: clamp(40px, 8vw, 72px); line-height: 1.1; font-weight: 800;
-      background: linear-gradient(135deg, #ffffff 30%, var(--neon-blue) 70%, var(--neon-purple) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 74px);
+      line-height: 1.05;
+      font-weight: 850;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+      max-width: 11ch;
     }
-    .highlight { position: relative; display: inline-block; color: #ffffff; -webkit-text-fill-color: #ffffff; }
-    .highlight::after {
-      content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px;
-      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
-      box-shadow: 0 0 10px var(--neon-blue);
+
+    .hero h1 .gradient {
+      background: linear-gradient(135deg, #ffffff 18%, var(--accent) 56%, var(--accent-3) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .sub { max-width: 800px; margin: 28px auto 42px; color: var(--text-secondary); font-size: 20px; font-weight: 300; }
-    .cta-row { display: flex; justify-content: center; gap: 20px; }
+
+    .hero p.lead {
+      max-width: 700px;
+      color: var(--text-secondary);
+      font-size: 19px;
+      margin-bottom: 28px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .hero-points span {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      color: #dce4f5;
+      font-size: 14px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
 
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; min-width: 190px;
-      padding: 16px 28px; border-radius: 14px; font-weight: 700; font-size: 16px;
-      transition: 0.3s ease; position: relative; overflow: hidden; z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-width: 180px;
+      min-height: 54px;
+      padding: 14px 22px;
+      border-radius: 16px;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
     }
-    .btn::before {
-      content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px;
-      z-index: -1; background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--neon-blue));
-      background-size: 400%; border-radius: 16px; opacity: 0; transition: 0.3s;
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
-    .btn:hover::before { opacity: 1; animation: steam 10s linear infinite; }
-    .btn-primary { background: #ffffff; color: #010206; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
-    .btn-secondary { background: transparent; color: #f5f7fb; border: 1px solid rgba(255,255,255,0.1); }
-    .btn-secondary:hover { border-color: var(--neon-blue); color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
-    .btn:hover { transform: translateY(-3px) scale(1.02); }
 
-    @keyframes steam { 0% { background-position: 0% 0%; } 50% { background-position: 200% 0%; } 100% { background-position: 0% 0%; } }
-    .hero .note { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 13px; color: #667085; }
+    .btn-primary {
+      background: linear-gradient(135deg, #ffffff 0%, #d6fbff 100%);
+      color: #020510;
+      box-shadow: 0 12px 30px rgba(255, 255, 255, 0.18);
+    }
 
-    .section { padding: 120px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.03); }
-    .section-header { text-align: center; max-width: 700px; margin: 0 auto 72px; }
-    .section-header h2 { font-size: clamp(30px, 5vw, 48px); margin-bottom: 16px; color: #ffffff; }
-    .section-header p { color: var(--text-secondary); font-size: 18px; }
+    .btn-secondary {
+      border-color: rgba(255, 255, 255, 0.10);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+    }
 
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .card-wrap { perspective: 1000px; }
+    .btn-secondary:hover {
+      border-color: rgba(0, 233, 255, 0.34);
+      color: var(--accent);
+      box-shadow: 0 0 24px rgba(0, 233, 255, 0.12);
+    }
+
+    .hero-note {
+      color: #8c97b2;
+      font-size: 14px;
+      max-width: 720px;
+    }
+
+    .hero-panel {
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(12, 17, 31, 0.92), rgba(10, 14, 24, 0.78));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(135deg, rgba(0, 233, 255, 0.18), rgba(255, 77, 196, 0.12), transparent 50%);
+      pointer-events: none;
+    }
+
+    .panel-title {
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .panel-heading {
+      font-size: 30px;
+      line-height: 1.18;
+      margin-bottom: 18px;
+    }
+
+    .panel-list {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .panel-item {
+      padding: 14px 16px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .panel-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    .panel-item span {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
+    .panel-foot {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #dbe6ff;
+      font-size: 14px;
+    }
+
+    .panel-foot span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(111, 107, 255, 0.12);
+      border: 1px solid rgba(111, 107, 255, 0.2);
+    }
+
+    .section {
+      padding: 96px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-header h2 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-size: 18px;
+      color: var(--text-secondary);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card-wrap {
+      perspective: 1000px;
+    }
+
     .card {
-      background: var(--bg-card); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px;
-      padding: 36px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out; position: relative;
-      overflow: hidden; height: 100%; transform-style: preserve-3d;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      padding: 28px;
+      border-radius: var(--radius-md);
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      transform-style: preserve-3d;
+      transition: transform 0.12s ease-out, border-color 0.25s ease, box-shadow 0.25s ease;
     }
-    .card:hover { border-color: rgba(0, 243, 255, 0.2); box-shadow: 0 0 30px rgba(0, 243, 255, 0.1), 0 10px 40px rgba(0, 0, 0, 0.4); }
-    .card-glow {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: radial-gradient(circle at center, rgba(0, 243, 255, 0.1) 0%, transparent 70%);
-      opacity: 0; transition: opacity 0.3s; pointer-events: none; z-index: -1;
+
+    .card:hover {
+      border-color: rgba(0, 233, 255, 0.18);
+      box-shadow: 0 16px 60px rgba(0, 0, 0, 0.36), 0 0 28px rgba(0, 233, 255, 0.08);
     }
-    .card:hover .card-glow { opacity: 1; }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(0, 233, 255, 0.10), transparent 40%);
+      pointer-events: none;
+    }
+
     .card-icon {
-      width: 56px; height: 56px; border-radius: 12px; background: rgba(0, 243, 255, 0.05);
-      color: var(--neon-blue); display: flex; align-items: center; justify-content: center;
-      margin-bottom: 24px; font-size: 24px; text-shadow: 0 0 10px var(--neon-blue); transform: translateZ(30px);
+      width: 54px;
+      height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      background: rgba(0, 233, 255, 0.08);
+      border: 1px solid rgba(0, 233, 255, 0.14);
+      color: var(--accent);
+      font-size: 24px;
+      transform: translateZ(26px);
     }
-    .card h3 { margin: 0 0 14px; font-size: 22px; color: #ffffff; transform: translateZ(25px); }
-    .card p { color: var(--text-secondary); font-size: 16px; transform: translateZ(20px); }
 
-    .two-col { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 32px; }
-    .list-card ul { margin: 24px 0 0; }
-    .list-card li {
-      padding: 12px 0 12px 28px; color: var(--text-secondary); border-bottom: 1px solid rgba(255,255,255,0.03);
-      position: relative; transition: color 0.3s;
+    .card h3,
+    .card h4 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      transform: translateZ(24px);
     }
-    .list-card li:hover { color: var(--neon-blue); }
-    .list-card li::before { content: '✦'; position: absolute; left: 0; top: 12px; color: var(--neon-blue); opacity: 0.6; text-shadow: 0 0 5px var(--neon-blue); }
-    .note-box {
-      grid-column: 1 / -1; background: rgba(0, 243, 255, 0.03); border: 1px solid rgba(0, 243, 255, 0.1);
-      padding: 20px; border-radius: 12px; font-size: 14px; color: #8f9bae; text-align: center; margin-top: 18px;
-    }
-    .qq-box {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      padding: 60px 40px; border-color: rgba(148, 0, 255, 0.1);
-      background: linear-gradient(135deg, rgba(148, 0, 255, 0.05) 0%, rgba(18, 23, 34, 0.7) 100%);
-    }
-    .qq-box:hover { border-color: rgba(148, 0, 255, 0.3); box-shadow: 0 0 30px rgba(148, 0, 255, 0.15), 0 10px 40px rgba(0, 0, 0, 0.4); }
-    .qq-icon { font-size: 40px; color: var(--neon-purple); margin-bottom: 24px; text-shadow: 0 0 15px var(--neon-purple); }
-    .qq-id {
-      font-size: clamp(30px, 6vw, 56px); font-weight: 800; color: #ffffff;
-      background: linear-gradient(135deg, #ffffff 40%, var(--neon-purple) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 0 40px rgba(148, 0, 255, 0.4);
-    }
-    .qq-note { font-size: 16px; color: #8f9bae; margin-top: 18px; }
-    .footer { padding: 48px 0; color: #667085; font-size: 14px; text-align: center; }
 
-    @media (max-width: 992px) { .grid, .two-col { grid-template-columns: 1fr; gap: 24px; } }
-    @media (max-width: 600px) { .hero { height: auto; padding: 120px 0 60px; } .section { padding: 80px 0; } .cta-row { flex-direction: column; gap: 14px; } .btn { width: 100%; } }
+    .card p,
+    .card li {
+      color: var(--text-secondary);
+      transform: translateZ(18px);
+    }
+
+    .card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .card li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow: 0 0 12px rgba(0, 233, 255, 0.35);
+    }
+
+    .service-emphasis {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .service-emphasis span {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: #dbe6ff;
+      font-size: 15px;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step-card {
+      padding: 24px;
+      border-radius: var(--radius-md);
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .step-index {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(0, 233, 255, 0.16), rgba(111, 107, 255, 0.18));
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .step-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .faq-card {
+      padding: 24px 26px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .faq-card h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .faq-card p {
+      color: var(--text-secondary);
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      padding: 32px;
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(8, 15, 28, 0.96), rgba(17, 20, 42, 0.94));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(0, 233, 255, 0.13), transparent 34%),
+        radial-gradient(circle at bottom right, rgba(255, 77, 196, 0.10), transparent 28%);
+      pointer-events: none;
+    }
+
+    .contact-copy {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin: 26px 0 16px;
+    }
+
+    .contact-id {
+      font-size: clamp(34px, 5vw, 56px);
+      font-weight: 850;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      background: linear-gradient(135deg, #ffffff 18%, var(--accent) 65%, var(--accent-3) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .copy-btn {
+      padding: 12px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .copy-btn:hover {
+      border-color: rgba(0, 233, 255, 0.28);
+      transform: translateY(-2px);
+    }
+
+    .copy-status {
+      min-height: 24px;
+      color: var(--accent-warm);
+      font-size: 14px;
+    }
+
+    .contact-meta {
+      display: grid;
+      gap: 12px;
+      align-content: start;
+    }
+
+    .contact-meta .meta-item {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: #dce6fb;
+    }
+
+    .contact-meta strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    .footer {
+      padding: 36px 0 64px;
+      color: #8490ad;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .footer p + p {
+      margin-top: 6px;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .contact-card,
+      .grid-2,
+      .grid-3,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 56px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .hero h1 {
+        max-width: none;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-row {
+        flex-direction: column;
+      }
+
+      .hero-panel,
+      .card,
+      .faq-card,
+      .step-card,
+      .contact-card {
+        padding: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      #particles-js { display: none; }
+    }
   </style>
 </head>
 <body>
   <canvas id="particles-js"></canvas>
-  <header class="hero">
-    <div class="container hero-content">
-      <div class="badge">Enterprise Corporate Verify</div>
-      <h1>从海量线索中，提炼<span class="highlight">商机金矿</span></h1>
-      <p class="sub">企业线索清洗、公开信息核验、高价值商务触达前置验证，让每一次沟通都更有价值。</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">立即咨询</a>
-        <a class="btn btn-secondary" href="#service">查看服务</a>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark"></span>
+        <span class="brand-label">chashoujihao.online</span>
+      </a>
+      <nav class="nav">
+        <a href="#service">服务内容</a>
+        <a href="#process">合作流程</a>
+        <a href="#faq">常见问题</a>
+        <a href="#contact">立即咨询</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">Public Data Verification Service</div>
+        <h1>先核验，<span class="gradient">再触达</span></h1>
+        <p class="lead">
+          面向销售、招商、渠道、BD团队，提供企业公开信息核验、商务线索清洗、公开联系方式有效性初筛服务，
+          帮你把有限精力用在更值得跟进的客户身上。
+        </p>
+        <div class="hero-points">
+          <span>企业公开信息交叉核验</span>
+          <span>商务线索质量初筛</span>
+          <span>公开联系方式有效性判断</span>
+          <span>一对一人工交付</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">立即咨询合作</a>
+          <a class="btn btn-secondary" href="#service">查看服务详情</a>
+        </div>
+        <p class="hero-note">
+          说明：服务仅基于企业公开披露信息、公开联系方式及客户提供材料进行核验，
+          不涉及非法获取、出售或交换任何个人隐私信息。
+        </p>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-title">适用团队</div>
+        <div class="panel-heading">把无效触达拦在沟通之前</div>
+        <div class="panel-list">
+          <div class="panel-item">
+            <strong>销售与BD</strong>
+            <span>优先筛出更值得跟进的客户，减少撞线、空号、错误联系人造成的损耗。</span>
+          </div>
+          <div class="panel-item">
+            <strong>招商与渠道</strong>
+            <span>在触达前先做公开信息一致性初查，降低无效拜访与低质量线索占比。</span>
+          </div>
+          <div class="panel-item">
+            <strong>人工定制交付</strong>
+            <span>按你的业务场景组合核验项，不做花哨包装，直接围绕转化率和推进效率服务。</span>
+          </div>
+        </div>
+        <div class="panel-foot">
+          <span>公开信息校验</span>
+          <span>商务线索清洗</span>
+          <span>触达前置验证</span>
+        </div>
       </div>
     </div>
-    <p class="note">仅基于公开信息核验，不涉及任何非法数据获取</p>
   </header>
+
   <main>
-    <section class="section" id="advantage">
-      <div class="container">
-        <div class="section-header"><h2>核心服务优势</h2><p>赋能商务拓客团队，快速甄别高质量线索，降低沟通成本与无效投入。</p></div>
-        <div class="grid">
-          <div class="card-wrap"><div class="card" data-tilt><div class="card-glow"></div><div class="card-icon">✦</div><h3>公开信息核验</h3><p>针对企业公开披露信息、工商与业务线索做交叉校验，减少错误触达。</p></div></div>
-          <div class="card-wrap"><div class="card" data-tilt><div class="card-glow"></div><div class="card-icon">✧</div><h3>线索真实性初筛</h3><p>适用于接触客户、渠道对接前的基础验证，帮助判断线索可信度与跟进优先级。</p></div></div>
-          <div class="card-wrap"><div class="card" data-tilt><div class="card-glow"></div><div class="card-icon">✦</div><h3>人工个性化交付</h3><p>支持按需定制核验方案，匹配不同业务场景下的精准获客与触达需求。</p></div></div>
-        </div>
-      </div>
-    </section>
     <section class="section" id="service">
-      <div class="container two-col">
-        <div class="card list-card" data-tilt data-tilt-max="5">
-          <div class="card-glow"></div><h2>服务内容</h2>
-          <ul><li>企业工商与公开信息合法校验</li><li>公开联系方式有效性核验（如：座机、商务邮箱）</li><li>商务线索清洗与初步真伪筛选</li><li>合作前基础背景公开初筛</li><li>高价值客户线索排序与跟进建议</li></ul>
-        </div>
-        <div class="card qq-box" id="contact" data-tilt data-tilt-max="10">
-          <div class="card-glow"></div><div class="qq-icon">✧</div><p>联系咨询 (Contact Us)</p>
-          <div class="qq-id">QQ：QTW6768</div><div class="qq-note">随时沟通业务需求与个性化方案。</div>
-        </div>
-        <div class="note-box">温馨提示：本服务定位于合规的公开信息验证，不涉及任何出售、交换个人隐私信息的用途，请在合法合规前提下使用验证结果。</div>
-      </div>
-    </section>
-    <section class="section">
       <div class="container">
         <div class="section-header">
-          <h2>常见搜索问题</h2>
-          <p>以下问题是客户在寻找企业信息核验服务时的常见搜索需求</p>
+          <div class="eyebrow">Service</div>
+          <h2>你真正需要的不是更多线索，而是更少的无效线索</h2>
+          <p>围绕实际触达前的判断动作设计服务内容，先把明显低质量、错误、冲突的信息筛出去，再做后续跟进。</p>
         </div>
-        <div class="card list-card">
-          <ul>
-            <li>企业联系方式核验平台可靠吗</li>
-            <li>如何判断企业电话是否真实</li>
-            <li>高管联系方式是否真实</li>
-            <li>企业客户信息怎么核实</li>
-            <li>商务线索真假怎么判断</li>
-            <li>B2B客户筛选怎么做</li>
-            <li>招商客户信息是否真实</li>
-            <li>客户背景信息核验方法</li>
-          </ul>
+        <div class="grid-3">
+          <div class="card-wrap">
+            <article class="card" data-tilt data-tilt-max="10">
+              <div class="card-icon">✦</div>
+              <h3>企业公开信息核验</h3>
+              <p>针对工商、公开披露、公开业务资料和客户提交信息做交叉比对，优先发现明显不一致和风险点。</p>
+              <ul>
+                <li>企业主体基础信息一致性判断</li>
+                <li>公开资料与业务描述交叉核验</li>
+                <li>合作前背景公开初筛</li>
+              </ul>
+            </article>
+          </div>
+          <div class="card-wrap">
+            <article class="card" data-tilt data-tilt-max="10">
+              <div class="card-icon">✧</div>
+              <h3>商务线索清洗</h3>
+              <p>把来源杂、质量不稳定的线索做一轮清洗，帮助你把跟进优先级重新排清楚。</p>
+              <ul>
+                <li>重复线索与明显异常线索筛出</li>
+                <li>触达前的基础可信度初判</li>
+                <li>高价值客户线索排序建议</li>
+              </ul>
+            </article>
+          </div>
+          <div class="card-wrap">
+            <article class="card" data-tilt data-tilt-max="10">
+              <div class="card-icon">✦</div>
+              <h3>公开联系方式有效性初筛</h3>
+              <p>适合在沟通前先判断联系方式是否值得投入时间，减少反复拨打、无效跟进和误触达。</p>
+              <ul>
+                <li>公开电话、座机、商务邮箱有效性判断</li>
+                <li>触达对象与业务信息匹配度初筛</li>
+                <li>适配销售、渠道、招商、拓客团队</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
+
     <section class="section">
-      <div class="container" style="text-align:center;">
-        <h2>核心服务入口</h2>
-        <p>
-          <a href="/check-contact.html" class="btn btn-primary">企业联系方式核验服务</a>
-        </p>
+      <div class="container grid-2">
+        <div class="card-wrap">
+          <article class="card" data-tilt data-tilt-max="8">
+            <div class="card-icon">◎</div>
+            <h3>适用场景</h3>
+            <p>如果你有以下情况，这个服务会比较有价值。</p>
+            <ul>
+              <li>销售名单来源多，质量参差不齐</li>
+              <li>招商或渠道拓展前，需要先做一轮真实性初筛</li>
+              <li>团队每天触达量大，空耗在错误线索上的时间明显偏多</li>
+              <li>想把有限的人力集中到更高概率推进的客户上</li>
+            </ul>
+          </article>
+        </div>
+        <div class="card-wrap">
+          <article class="card" data-tilt data-tilt-max="8">
+            <div class="card-icon">◆</div>
+            <h3>交付原则</h3>
+            <p>不堆概念，不卖模糊说法，直接围绕业务动作交付能用的结果。</p>
+            <div class="service-emphasis">
+              <span>按场景定制核验项，而不是套一个固定模板。</span>
+              <span>重点解决“要不要跟进、先跟进谁、哪些先排除”这三个问题。</span>
+              <span>以公开信息和合规使用为前提，结果用于商务判断辅助，不替代法律结论。</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">Process</div>
+          <h2>合作流程清楚，沟通成本更低</h2>
+          <p>不需要复杂流程，先明确需求，再按实际业务目标定制核验范围和交付方式。</p>
+        </div>
+        <div class="process-grid">
+          <div class="step-card">
+            <div class="step-index">1</div>
+            <h3>说明需求</h3>
+            <p>告诉我你的行业、名单来源、核验目标，以及你最想排除或确认的问题。</p>
+          </div>
+          <div class="step-card">
+            <div class="step-index">2</div>
+            <h3>确认方案</h3>
+            <p>根据场景确定核验项、交付范围、预期结果形式，避免一上来做无效动作。</p>
+          </div>
+          <div class="step-card">
+            <div class="step-index">3</div>
+            <h3>执行清洗</h3>
+            <p>围绕公开信息与前置验证动作开展筛查，输出更适合继续推进的线索集合。</p>
+          </div>
+          <div class="step-card">
+            <div class="step-index">4</div>
+            <h3>交付结果</h3>
+            <p>按你的使用习惯给到结果，方便后续销售、渠道、招商团队直接衔接跟进。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="eyebrow">FAQ</div>
+          <h2>常见问题</h2>
+          <p>先把最容易卡住合作判断的几个问题说明白。</p>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>这类服务适合什么团队？</h3>
+            <p>最适合销售、招商、渠道、BD、商机运营等需要大量触达企业客户的团队，尤其适合名单来源复杂、跟进资源有限的场景。</p>
+          </article>
+          <article class="faq-card">
+            <h3>是不是做个人隐私类查询？</h3>
+            <p>不是。服务定位是企业公开信息核验、商务线索清洗和公开联系方式有效性初筛，不涉及非法获取、交易或传播个人隐私信息。</p>
+          </article>
+          <article class="faq-card">
+            <h3>能解决什么实际问题？</h3>
+            <p>核心是减少无效触达、错误跟进和低质量线索占用，让团队把更多时间花在更值得推进的客户上。</p>
+          </article>
+          <article class="faq-card">
+            <h3>怎么开始合作更高效？</h3>
+            <p>直接带着你的业务目标来沟通，比如想筛电话、筛邮箱、筛主体一致性，或者只是想先排除明显不值得跟的名单，我会按需求给出方案。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2>需要先看名单质量，还是先聊你的业务场景？</h2>
+            <p style="color: var(--text-secondary); max-width: 620px;">
+              直接联系我，说明你的行业、名单来源、想核验的问题和预期交付方式。
+              如果合适，就按你的场景快速落方案；如果不合适，也能先帮你判断值不值得做。
+            </p>
+            <div class="contact-copy">
+              <div class="contact-id">QQ：QTW6768</div>
+              <button class="copy-btn" type="button" id="copy-qq">复制 QQ</button>
+            </div>
+            <div class="copy-status" id="copy-status" aria-live="polite"></div>
+          </div>
+          <div class="contact-meta">
+            <div class="meta-item">
+              <strong>建议咨询时说明</strong>
+              <span>行业、名单量级、核验目标、结果想怎么交付。</span>
+            </div>
+            <div class="meta-item">
+              <strong>适合先沟通再做</strong>
+              <span>目标越明确，方案越容易贴近你的业务，而不是做一堆表面工作。</span>
+            </div>
+            <div class="meta-item">
+              <strong>合规前提</strong>
+              <span>仅基于公开信息和合规用途进行判断，结果用于商务辅助决策参考。</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="container">© 2026 chashoujihao.online | 企业商务信息核验与线索清洗服务</div></footer>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 chashoujihao.online | 企业公开信息核验与商务线索清洗</p>
+      <p>服务定位：公开信息核验、商务线索清洗、公开联系方式有效性初筛</p>
+    </div>
+  </footer>
 
   <script>
-    const canvas = document.getElementById('particles-js');
-    const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth; canvas.height = window.innerHeight;
-    let particlesArray = [];
-    let mouse = { x: null, y: null, radius: (canvas.height / 80) * (canvas.width / 80) };
-    window.addEventListener('mousemove', (event) => { mouse.x = event.x; mouse.y = event.y; });
-    window.addEventListener('resize', () => { canvas.width = innerWidth; canvas.height = innerHeight; mouse.radius = (canvas.height / 80) * (canvas.width / 80); init(); });
-    window.addEventListener('mouseout', () => { mouse.x = undefined; mouse.y = undefined; });
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    class Particle {
-      constructor(x, y, directionX, directionY, size, color) { this.x = x; this.y = y; this.directionX = directionX; this.directionY = directionY; this.size = size; this.color = color; }
-      draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false); ctx.fillStyle = this.color; ctx.fill(); }
-      update() {
-        if (this.x > canvas.width || this.x < 0) { this.directionX = -this.directionX; }
-        if (this.y > canvas.height || this.y < 0) { this.directionY = -this.directionY; }
-        let dx = mouse.x - this.x; let dy = mouse.y - this.y; let distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < mouse.radius) {
-          if (mouse.x < this.x && this.x < canvas.width - this.size * 10) { this.x += 10; }
-          if (mouse.x > this.x && this.x > this.size * 10) { this.x -= 10; }
-          if (mouse.y < this.y && this.y < canvas.height - this.size * 10) { this.y += 10; }
-          if (mouse.y > this.y && this.y > this.size * 10) { this.y -= 10; }
+    if (!prefersReducedMotion) {
+      const canvas = document.getElementById('particles-js');
+      const ctx = canvas.getContext('2d');
+      let particlesArray = [];
+      let mouse = { x: null, y: null, radius: 120 };
+
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        mouse.radius = Math.max(90, Math.min(160, canvas.width / 12));
+      }
+
+      class Particle {
+        constructor(x, y, directionX, directionY, size, color) {
+          this.x = x;
+          this.y = y;
+          this.directionX = directionX;
+          this.directionY = directionY;
+          this.size = size;
+          this.color = color;
         }
-        this.x += this.directionX * 0.5; this.y += this.directionY * 0.5; this.draw();
+
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        }
+
+        update() {
+          if (this.x > canvas.width || this.x < 0) {
+            this.directionX = -this.directionX;
+          }
+          if (this.y > canvas.height || this.y < 0) {
+            this.directionY = -this.directionY;
+          }
+
+          if (mouse.x !== null && mouse.y !== null) {
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < mouse.radius) {
+              if (mouse.x < this.x && this.x < canvas.width - this.size * 10) this.x += 1.8;
+              if (mouse.x > this.x && this.x > this.size * 10) this.x -= 1.8;
+              if (mouse.y < this.y && this.y < canvas.height - this.size * 10) this.y += 1.8;
+              if (mouse.y > this.y && this.y > this.size * 10) this.y -= 1.8;
+            }
+          }
+
+          this.x += this.directionX * 0.25;
+          this.y += this.directionY * 0.25;
+          this.draw();
+        }
       }
-    }
-    function init() {
-      particlesArray = []; let numberOfParticles = (canvas.height * canvas.width) / 9000;
-      for (let i = 0; i < numberOfParticles * 0.6; i++) {
-        let size = (Math.random() * 1.5) + 0.5;
-        let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-        let directionX = (Math.random() * 2) - 1; let directionY = (Math.random() * 2) - 1;
-        let color = 'rgba(0, 243, 255, 0.4)'; particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+
+      function initParticles() {
+        particlesArray = [];
+        const amount = Math.max(28, Math.min(74, Math.floor((canvas.width * canvas.height) / 18000)));
+
+        for (let i = 0; i < amount; i++) {
+          const size = Math.random() * 1.4 + 0.6;
+          const x = Math.random() * (canvas.width - size * 2) + size;
+          const y = Math.random() * (canvas.height - size * 2) + size;
+          const directionX = Math.random() * 0.8 - 0.4;
+          const directionY = Math.random() * 0.8 - 0.4;
+          const color = i % 5 === 0 ? 'rgba(255, 77, 196, 0.30)' : 'rgba(0, 233, 255, 0.28)';
+          particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+        }
       }
-    }
-    function animate() {
-      requestAnimationFrame(animate); ctx.clearRect(0, 0, innerWidth, innerHeight);
-      for (let i = 0; i < particlesArray.length; i++) { particlesArray[i].update(); }
-      connect();
-    }
-    function connect() {
-      let opacityValue = 1;
-      for (let a = 0; a < particlesArray.length; a++) {
-        for (let b = a; b < particlesArray.length; b++) {
-          let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
-          if (distance < (canvas.width / 7) * (canvas.height / 7)) {
-            opacityValue = 1 - (distance / 20000); ctx.strokeStyle = `rgba(148, 0, 255, ${opacityValue * 0.3})`;
-            ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(particlesArray[a].x, particlesArray[a].y); ctx.lineTo(particlesArray[b].x, particlesArray[b].y); ctx.stroke();
+
+      function connectParticles() {
+        for (let a = 0; a < particlesArray.length; a++) {
+          for (let b = a + 1; b < particlesArray.length; b++) {
+            const dx = particlesArray[a].x - particlesArray[b].x;
+            const dy = particlesArray[a].y - particlesArray[b].y;
+            const distance = dx * dx + dy * dy;
+
+            if (distance < 13000) {
+              const opacity = 1 - distance / 13000;
+              ctx.strokeStyle = `rgba(111, 107, 255, ${opacity * 0.18})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+              ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+              ctx.stroke();
+            }
           }
         }
       }
-    }
-    init(); animate();
 
-    const cards = document.querySelectorAll('[data-tilt]');
-    cards.forEach(card => {
-      const maxTilt = card.getAttribute('data-tilt-max') || 15;
-      const cardWrap = card.parentElement;
-      cardWrap.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect(); const x = e.clientX - rect.left; const y = e.clientY - rect.top;
-        const centerX = rect.width / 2; const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -maxTilt; const rotateY = ((x - centerX) / centerX) * maxTilt;
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = 0; i < particlesArray.length; i++) {
+          particlesArray[i].update();
+        }
+        connectParticles();
+        requestAnimationFrame(animateParticles);
+      }
+
+      resizeCanvas();
+      initParticles();
+      animateParticles();
+
+      window.addEventListener('mousemove', (event) => {
+        mouse.x = event.clientX;
+        mouse.y = event.clientY;
       });
-      cardWrap.addEventListener('mouseleave', () => { card.style.transform = `rotateX(0deg) rotateY(0deg)`; });
+
+      window.addEventListener('mouseout', () => {
+        mouse.x = null;
+        mouse.y = null;
+      });
+
+      window.addEventListener('resize', () => {
+        resizeCanvas();
+        initParticles();
+      });
+    }
+
+    const tiltCards = document.querySelectorAll('[data-tilt]');
+    tiltCards.forEach((card) => {
+      const tiltRoot = card.closest('.card-wrap') || card;
+      const maxTilt = Number(card.getAttribute('data-tilt-max') || 12);
+
+      tiltRoot.addEventListener('mousemove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = ((y - centerY) / centerY) * -maxTilt;
+        const rotateY = ((x - centerX) / centerX) * maxTilt;
+        card.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg)`;
+      });
+
+      tiltRoot.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+      });
     });
+
+    const copyBtn = document.getElementById('copy-qq');
+    const copyStatus = document.getElementById('copy-status');
+
+    if (copyBtn && copyStatus) {
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText('QTW6768');
+          copyStatus.textContent = 'QQ 已复制，添加时可备注你的业务需求。';
+        } catch (error) {
+          copyStatus.textContent = '复制失败，请手动添加 QQ：QTW6768';
+        }
+      });
+    }
   </script>
 </body>
 </html>
